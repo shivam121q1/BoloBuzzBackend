@@ -28,6 +28,7 @@ import createTodaysFirstMessage from './helpers/createTodaysFirstMessage'
 import passport from 'passport'
 import cookieSession from 'cookie-session'
 
+
 const app = express()
 const server = http.createServer(app)
 const io = new Server(server, {
@@ -397,6 +398,8 @@ io.on('connection', (socket) => {
   })
 })
 
+
+
 // Routes
 app.use('/api/v1/auth', auth)
 app.use('/api/v1/channel', channel)
@@ -405,6 +408,11 @@ app.use('/api/v1/threads', thread)
 app.use('/api/v1/teammates', teammates)
 app.use('/api/v1/organisation', organisation)
 app.use('/api/v1/conversations', conversations)
+
+// export function joinTeammatesEmail(
+
+// );
+
 
 // error handler
 app.use(errorResponse)

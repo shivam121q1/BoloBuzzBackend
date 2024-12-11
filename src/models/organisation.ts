@@ -38,9 +38,10 @@ const organisationSchema = new mongoose.Schema<OrganisationSchemaType>(
 // Generate orgnaisation join link
 organisationSchema.methods.generateJoinLink = function () {
   const url =
-    process.env.NODE_ENV === 'development'
+    process.env.NODE_ENV === 'production'
       ? process.env.STAGING_URL
       : process.env.PRODUCTION_URL
+
   this.joinLink = `${url}/${this._id}`
   this.url = `${url}/${this.name}`
 }

@@ -38,7 +38,7 @@ export async function createTeammates(
 
           sendEmail(
             user.email,
-            `${invitedBy.email} has invited you to work with them in Slack`,
+            `${invitedBy.email} has invited you to work with them in BoloBuzz`,
             joinTeammatesEmail(
               invitedBy.username,
               invitedBy.email,

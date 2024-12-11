@@ -83,7 +83,7 @@ export const register = async (
     await user.save()
     sendEmail(
       email,
-      'Slack confirmation code',
+      'BoloBuzz confirmation code',
       verificationHtml(verificationToken)
     )
 
